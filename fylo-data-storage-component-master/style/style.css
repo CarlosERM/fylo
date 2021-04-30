@@ -1,0 +1,250 @@
+:root {
+    /* PRIMARY */
+    --gradient:linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    /* NEUTRAL */
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue:hsl(228, 56%, 26%);
+    --very-dark-blue:hsl(229, 57%, 11%);
+}
+
+* {
+    box-sizing:border-box;
+}
+
+body, html {
+    height:100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size:14px;
+    
+    background:url('../images/bg-mobile.png')  no-repeat;
+    background-size: cover;
+    margin:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+/* WRAPPER STYLE */
+.wrapper {
+    color:var(--pale-blue);
+    position:relative;
+    width:87%;
+    max-width:550px;
+}
+
+.wrapper__section--color {
+    background-color: var(--dark-blue);
+}
+/* SECTION FYLO STYLE */
+
+.wrapper__fylo {
+    padding:1.8em 3em;
+    border-radius: 10px 100px 10px 10px;
+}
+
+.wrapper__fylo__title {
+    margin-top:1em;
+    margin-bottom:1.3em;
+}
+
+.wrapper__fylo__paste {
+    padding:0;
+    display:flex;
+
+}
+
+.wrapper__fylo__paste li {
+    list-style:none;
+    background:var(--very-dark-blue);
+    border-radius:0.6rem;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    height:45px;
+    width:45px;
+}
+
+li + li {
+    margin-left:1rem;
+}
+
+/* WRAPPER OF THE PROGRESS BAR */
+.wrapper__progress-bar {
+    padding: 2em;
+    margin-top:1rem;
+    border-radius:10px;
+}
+
+.wrapper__progress-bar__paragraph {
+    text-align:center;
+    margin-top:0;
+}
+
+span {
+    font-weight:700;
+}
+/* SLIDER */
+
+input[type=range] {
+
+    -webkit-appearance: none;
+    width:100%;
+
+}
+/* SAFARI, CHROME, OPERA */
+ input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width:13px;
+    height:13px;
+    border:none;
+    border-radius:50%;
+    background:var(--pale-blue);
+} 
+input[type=range]::-webkit-slider-runnable-track {
+    background:var(--very-dark-blue);
+    height:21px;
+    border-radius:10px;
+}
+
+/* MOZILLA */
+input[type=range]::-moz-range-thumb {
+    border-radius:50%;
+    width:13px;
+    height:13px;
+    border:none;
+   
+}
+
+input[type="range"]::-moz-range-track {
+    background:var(--very-dark-blue);
+    height:21px;
+    border-radius:10px;
+    
+}
+
+input[type="range"]::-moz-range-progress {
+    background:var(--gradient);
+    height:15px;
+    border-radius:5px;
+}
+
+/* MICROSOFT */
+input[type=range]::-ms-thumb {
+    border-radius:50%;
+    width:13px;
+    height:13px;
+    border:none;
+}
+
+input[type=range]::ms-track {
+    width:100%;
+    cursor:pointer;
+
+    background:var(--very-dark-blue);
+    height:21px;
+    border-radius:10px;
+} 
+
+
+.wrapper__progress-bar__legend {
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    font-weight:700;
+    margin-bottom:1em;;
+}
+
+.wrapper__progress-bar__legend p {
+    margin-top:0.5rem;
+    font-size:0.8rem;;
+}
+
+.wrapper__progress-bar__title {
+    background:white;
+    color:var(--very-dark-blue);
+   
+    /* width:3.5em;
+    height:1.5em; */
+    /* padding:0.6rem 1.6rem; */
+    width:4.5em;
+    height:1.8em;
+    
+    border-radius:10px;
+    
+    text-align:center;
+    text-transform:uppercase;
+
+    position:absolute;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0.3em;
+
+    font-size:2.5rem;
+
+    top:80%;
+    left:50%;
+    transform:translate(-50%);
+    
+
+}
+
+.wrapper__progress-bar__title span {
+    font-size:0.8rem;
+    color:var(--grayish-blue);
+}
+
+
+@media screen and (min-width:1100px) {
+    body {
+        background:url('../images/bg-desktop.png')   no-repeat, var(--very-dark-blue);
+        background-position:bottom -5em left;
+        background-size:contain;
+    }
+    .wrapper {
+        display:flex;
+        gap:2em;
+        max-width:none;
+        align-items:flex-end;
+        justify-content:center;
+    }
+    .wrapper__fylo  {
+        padding-right:10em;
+    }
+    .wrapper__progress-bar {
+        width:550px;
+        margin:0;
+   }
+   .wrapper__progress-bar__paragraph{
+       text-align:left;
+       font-size:1.2em;
+   }
+   .wrapper__progress-bar__legend {
+       margin:0;
+   }
+   .wrapper__progress-bar__title  {
+        top:-15%;
+        left:77%;
+
+   }
+   .wrapper__progress-bar__title::before {
+       content:"";
+       height:50px;
+       width:50px;
+       background:white;
+       position:absolute;
+       bottom:-20px;
+       right:0;
+       clip-path:polygon(0 0, 100% 100%, 100% 0);
+   }
+
+}

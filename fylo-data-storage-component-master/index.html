@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <link rel="stylesheet" href="style/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="wrapper__fylo wrapper__section--color">
+
+      <h1 class="wrapper__fylo__title"><img src="images/logo.svg" alt="Fylo"></h1>
+
+      <ul class="wrapper__fylo__paste">
+        <li><img src="images/icon-document.svg" alt="Document icon"></li>
+        <li><img src="images/icon-folder.svg" alt="Folder icon"></li>
+        <li><img src="images/icon-upload.svg" alt="Upload icon"></li>
+      </ul>
+
+    </section>
+    <section class="wrapper__progress-bar wrapper__section--color">
+      <p class="wrapper__progress-bar__paragraph">You’ve used <span>815 GB</span> of your storage</p>
+
+       <input class="wrapper__progress-bar__bar wrapper__section--color " type="range" max="10" value="7"  >
+      <div class="wrapper__progress-bar__legend">
+        <p>0 GB</p>
+        <p>1000 GB</p>
+      </div>
+      <h2 class="wrapper__progress-bar__title">185 <span>GB Left</span></h2>
+  
+    </section>
+
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
